@@ -99,8 +99,8 @@ stages:
         displayName: 'Step 3'
         name: step3
 
-- stage: DummyStage
-  dependsOn:
+- stage: MyDummyStage
+  dependsOn: DummyStage
   displayName: MyDummyStage
   jobs:
   - job: MyDummyJobs
