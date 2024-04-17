@@ -52,23 +52,22 @@ public class VaultSecret
         return secret.Name;
     }
 
-    public Dictionary<string,string> ListSecrets()
+    public async void ListSecretsAsync()
     {
         var client = new SecretClient(vaultUri: new Uri(keyVaultUrl), credential: new DefaultAzureCredential());
     
 
-        Dictionary<string,string> dictonaryOFSecrets = new Dictionary<string,string>();
+        //Pageable<SecretProperties> allSecrets = client.GetPropertiesOfSecrets();
+        AsyncPageable<SecretProperties> allSecrets = client.GetPropertiesOfSecretsAsync();
 
-        Pageable<SecretProperties> allSecrets = client.GetPropertiesOfSecrets();
-
-        foreach (SecretProperties secretProperties in allSecrets)
+        await foreach (SecretProperties secretProperties in allSecrets)
         {
-            dictonaryOFSecrets.Add(secretProperties.Name, secretProperties.KeyId.ToString());
-           
-            
+            //dictonaryOFSecrets.Add(secretProperties.Name, secretProperties.KeyId.ToString());
+            Console.WriteLine(secretProperties.Name + "---" + secretProperties.Id);
+
         }
 
-        return dictonaryOFSecrets;
+        
     }
 }
 

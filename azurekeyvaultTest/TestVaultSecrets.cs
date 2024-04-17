@@ -36,12 +36,7 @@ public class TestVaultSecrets
     {
         VaultSecret myVault = new VaultSecret();
 
-        Dictionary<string, string> myDic = myVault.ListSecrets();
-
-        foreach(var list in myDic)
-        {
-            Console.WriteLine(list.Key + "---" + list.Value);
-        }
+        myVault.ListSecretsAsync();
         
        
     }
