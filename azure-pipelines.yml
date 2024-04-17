@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
 
 trigger:
-- master
+- none
 
 pool:
   vmImage: 'windows-latest'
@@ -35,4 +35,5 @@ steps:
 - task: MicrosoftSecurityDevOps@1
   inputs:
     command: 'run'
+  condition: always()
 
