@@ -158,3 +158,61 @@ stages:
       - script: echo "Step 33"
         displayName: 'Step 33'
         name: step33
+
+- stage: YourDummyStage
+  displayName: YourDummyStage
+  jobs:
+  - job: YourDummyJobs
+    displayName: 'Your Dummy Job'
+    steps:
+      - task: CopyFiles@2
+        displayName: 'Your Dummy Copy Task'
+        name: dummyCopy
+        inputs:
+          SourceFolder: '$(agent.builddirectory)'
+          Contents: '**'
+          TargetFolder: '$(agent.builddirectory)/temp'
+          CleanTargetFolder: true
+          OverWrite: true
+        condition: always()
+
+      - script: echo "Step 1"
+        displayName: 'Step 1'
+        name: step1
+
+      - script: echo "Step 2"
+        displayName: 'Step 2'
+        name: step2
+
+      - script: echo "Step 3"
+        displayName: 'Step 3'
+        name: step3
+  - job: YourAnotherDummyJobs
+    dependsOn: YourDummyJobs
+    displayName: 'Another Your Dummy Job '
+    steps:
+      - script: echo "Step 11"
+        displayName: 'Step 11'
+        name: step11
+
+      - script: echo "Step 21"
+        displayName: 'Step 21'
+        name: step21
+
+      - script: echo "Step 31"
+        displayName: 'Step 31'
+        name: step31
+  - job: 
+    displayName: 'Yet Another Your Dummy Job '
+    steps:
+      - script: echo "Step 12"
+        displayName: 'Step 12'
+        name: step12
+
+      - script: echo "Step 22"
+        displayName: 'Step 22'
+        name: step22
+
+      - script: echo "Step 33"
+        displayName: 'Step 33'
+        name: step33
