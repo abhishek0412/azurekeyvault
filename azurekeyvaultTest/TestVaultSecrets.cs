@@ -5,12 +5,15 @@ namespace azurekeyvaultTest;
 public class TestVaultSecrets
 
 {
+
+    string name = EmptyClass.getName();
+
     [TestMethod]
     public void TestSecretsCreation()
     {
         VaultSecret myVault = new VaultSecret();
         //Assert.AreEqual(myVault.CreateSecret("Abhishek", "Choudhary"), "Abhishek");
-        Console.WriteLine(myVault.CreateSecret("Supriya", "Choudhary"));
+        Console.WriteLine(myVault.CreateSecret(name, "Choudhary"));
     }
 
     [TestMethod]
@@ -26,7 +29,7 @@ public class TestVaultSecrets
     {
         VaultSecret myVault = new VaultSecret();
         //Assert.AreEqual(myVault.DeletedSecret("Abhishek"), "Abhishek");
-        Console.WriteLine(myVault.DeletedSecret("Supriya"));
+        Console.WriteLine(myVault.DeletedSecret(name));
 
     }
 

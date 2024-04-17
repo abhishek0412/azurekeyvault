@@ -31,9 +31,11 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+  
 
 - task: MicrosoftSecurityDevOps@1
   inputs:
     command: 'run'
+    break: true
   condition: always()
 
