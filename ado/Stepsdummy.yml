@@ -1,0 +1,3 @@
+steps:
+  - powershell: Get-ChildItem -Path $(Build.SourcesDirectory) -recurse
+    

@@ -227,3 +227,14 @@ stages:
     - script: echo "Step 11"
       displayName: 'Step 11'
       name: step11
+  
+  - job: YourNEWDummyJobs
+    displayName: 'Your NEW Dummy Job'
+    steps:
+    - script: echo This script runs before the template's steps
+    - template: ado/Stepsdummy.yml
+    - script: echo This script runs before the template's steps
+
+  - template: ado/Jobsdummy.yml
+
+- template: ado/Stagedummy.yml 
