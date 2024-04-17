@@ -5,27 +5,27 @@ namespace azurekeyvaultTest;
 public class TestVaultKeys
 
 {
-    string name = EmptyClass.getName();
+    static string name = EmptyClass.getName();
 
     [TestMethod,Priority(0)]
     public void TestKeysCreation()
     {
         VaultKeys myVaultKeys = new VaultKeys();
-        Console.WriteLine(myVaultKeys.CreateKey(name));
+        Console.WriteLine(myVaultKeys.CreateKey(TestVaultKeys.name));
     }
 
     [TestMethod, Priority(1)]
     public void TestKeyRetrival()
     {
         VaultKeys myVaultKeys = new VaultKeys();
-        Console.WriteLine(myVaultKeys.GetKey(name));
+        Console.WriteLine(myVaultKeys.GetKey(TestVaultKeys.name));
     }
 
     [TestMethod, Priority(2)]
     public void TestKeyDeletion()
     {
         VaultKeys myVaultKeys = new VaultKeys();
-        Console.WriteLine(myVaultKeys.DeletedKey(name));
+        Console.WriteLine(myVaultKeys.DeletedKey(TestVaultKeys.name));
 
     }
 
