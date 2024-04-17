@@ -47,6 +47,44 @@
           }
         }
       },
+      "Azure.Security.KeyVault.Certificates/4.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Core": "1.37.0",
+          "System.Memory": "4.5.4",
+          "System.Text.Json": "4.7.2",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Security.KeyVault.Certificates.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Security.KeyVault.Certificates.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Azure.Security.KeyVault.Keys/4.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Core": "1.37.0",
+          "System.Memory": "4.5.4",
+          "System.Text.Json": "4.7.2",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Security.KeyVault.Keys.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Security.KeyVault.Keys.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Azure.Security.KeyVault.Secrets/4.6.0": {
         "type": "package",
         "dependencies": {
@@ -304,6 +342,38 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Azure.Security.KeyVault.Certificates/4.6.0": {
+      "sha512": "e2ATU/n2ZDL/S8A8EdrcfKEvKc2BojCrrSpmM+JKnrSTQS32x/W0Ldu8utk+epLKwXvSJRSWtlgdo7X8hG1mCg==",
+      "type": "package",
+      "path": "azure.security.keyvault.certificates/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "README.md",
+        "azure.security.keyvault.certificates.4.6.0.nupkg.sha512",
+        "azure.security.keyvault.certificates.nuspec",
+        "azureicon.png",
+        "lib/netstandard2.0/Azure.Security.KeyVault.Certificates.dll",
+        "lib/netstandard2.0/Azure.Security.KeyVault.Certificates.xml"
+      ]
+    },
+    "Azure.Security.KeyVault.Keys/4.6.0": {
+      "sha512": "1KbCIkXmLaj+kDDNm1Va5rNlzgcJ/fVtnsoVmzZPKa38jz6DXhPyojdvGaOX8AdupGJceg0X1vrsGvZKN79Qzw==",
+      "type": "package",
+      "path": "azure.security.keyvault.keys/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "README.md",
+        "azure.security.keyvault.keys.4.6.0.nupkg.sha512",
+        "azure.security.keyvault.keys.nuspec",
+        "azureicon.png",
+        "lib/netstandard2.0/Azure.Security.KeyVault.Keys.dll",
+        "lib/netstandard2.0/Azure.Security.KeyVault.Keys.xml"
       ]
     },
     "Azure.Security.KeyVault.Secrets/4.6.0": {
@@ -704,6 +774,8 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Azure.Identity >= 1.11.1",
+      "Azure.Security.KeyVault.Certificates >= 4.6.0",
+      "Azure.Security.KeyVault.Keys >= 4.6.0",
       "Azure.Security.KeyVault.Secrets >= 4.6.0"
     ]
   },
@@ -747,6 +819,14 @@
           "Azure.Identity": {
             "target": "Package",
             "version": "[1.11.1, )"
+          },
+          "Azure.Security.KeyVault.Certificates": {
+            "target": "Package",
+            "version": "[4.6.0, )"
+          },
+          "Azure.Security.KeyVault.Keys": {
+            "target": "Package",
+            "version": "[4.6.0, )"
           },
           "Azure.Security.KeyVault.Secrets": {
             "target": "Package",

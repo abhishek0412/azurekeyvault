@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "YZ8s1vHGuYVOh5qBycDwRmaHVA1Phy758M4UAmTmzDa+8s841hbFa6BVLSFXN2HyxdypT7sVNdMDiH7wyZrITQ==",
+  "dgSpecHash": "BNKYLF18wRcOSYYBtN/rDRA9k4nsmu5Y5kfiyEhyJ0e+0oHKU/57lXcF3n8MBMyxs8tjMYcPB3+pLeZLUJRatg==",
   "success": true,
   "projectFilePath": "/Users/choudhary/azurekeyvault/azurekeyvaultTest/azurekeyvaultTest.csproj",
   "expectedPackageFiles": [
     "/Users/choudhary/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/choudhary/.nuget/packages/azure.identity/1.11.1/azure.identity.1.11.1.nupkg.sha512",
+    "/Users/choudhary/.nuget/packages/azure.security.keyvault.certificates/4.6.0/azure.security.keyvault.certificates.4.6.0.nupkg.sha512",
+    "/Users/choudhary/.nuget/packages/azure.security.keyvault.keys/4.6.0/azure.security.keyvault.keys.4.6.0.nupkg.sha512",
     "/Users/choudhary/.nuget/packages/azure.security.keyvault.secrets/4.6.0/azure.security.keyvault.secrets.4.6.0.nupkg.sha512",
     "/Users/choudhary/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
     "/Users/choudhary/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

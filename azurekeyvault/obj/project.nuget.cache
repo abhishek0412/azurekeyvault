@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "zAwOq58bMgF9e0x8a76XOJbUTGlxA8/JKMzLobv2CLvTwS+g4c+uxfeCi+cb4BbJy5k417aIXTXtQuIyuXpL6A==",
+  "dgSpecHash": "9ezg2enGicXdHDMpbBtUbTp5ynodLRjxY7bX8TYrK4BupqQz/6bgA4TVtDz3PRApFA9JO1DGQiPH1mGj4E3QSg==",
   "success": true,
   "projectFilePath": "/Users/choudhary/azurekeyvault/azurekeyvault/azurekeyvault.csproj",
   "expectedPackageFiles": [
     "/Users/choudhary/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/choudhary/.nuget/packages/azure.identity/1.11.1/azure.identity.1.11.1.nupkg.sha512",
+    "/Users/choudhary/.nuget/packages/azure.security.keyvault.certificates/4.6.0/azure.security.keyvault.certificates.4.6.0.nupkg.sha512",
+    "/Users/choudhary/.nuget/packages/azure.security.keyvault.keys/4.6.0/azure.security.keyvault.keys.4.6.0.nupkg.sha512",
     "/Users/choudhary/.nuget/packages/azure.security.keyvault.secrets/4.6.0/azure.security.keyvault.secrets.4.6.0.nupkg.sha512",
     "/Users/choudhary/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/choudhary/.nuget/packages/microsoft.identity.client/4.60.3/microsoft.identity.client.4.60.3.nupkg.sha512",
