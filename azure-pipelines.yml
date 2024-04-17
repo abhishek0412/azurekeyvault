@@ -219,7 +219,7 @@ stages:
         name: step33
 - stage: FinalStage
   displayName: FinalStage
-  dependsOn: BuildTestStage
+  dependsOn: YourDummyStage
   jobs:
   - job: YourNEWDummyJobs
     displayName: 'Your NEW Dummy Job'
