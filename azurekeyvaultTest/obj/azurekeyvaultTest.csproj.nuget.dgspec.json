@@ -1,0 +1,150 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/choudhary/azurekeyvault/azurekeyvaultTest/azurekeyvaultTest.csproj": {}
+  },
+  "projects": {
+    "/Users/choudhary/azurekeyvault/azurekeyvault/azurekeyvault.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/choudhary/azurekeyvault/azurekeyvault/azurekeyvault.csproj",
+        "projectName": "azurekeyvault",
+        "projectPath": "/Users/choudhary/azurekeyvault/azurekeyvault/azurekeyvault.csproj",
+        "packagesPath": "/Users/choudhary/.nuget/packages/",
+        "outputPath": "/Users/choudhary/azurekeyvault/azurekeyvault/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/choudhary/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.11.1, )"
+            },
+            "Azure.Security.KeyVault.Secrets": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/choudhary/azurekeyvault/azurekeyvaultTest/azurekeyvaultTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/choudhary/azurekeyvault/azurekeyvaultTest/azurekeyvaultTest.csproj",
+        "projectName": "azurekeyvaultTest",
+        "projectPath": "/Users/choudhary/azurekeyvault/azurekeyvaultTest/azurekeyvaultTest.csproj",
+        "packagesPath": "/Users/choudhary/.nuget/packages/",
+        "outputPath": "/Users/choudhary/azurekeyvault/azurekeyvaultTest/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/choudhary/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/choudhary/azurekeyvault/azurekeyvault/azurekeyvault.csproj": {
+                "projectPath": "/Users/choudhary/azurekeyvault/azurekeyvault/azurekeyvault.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
