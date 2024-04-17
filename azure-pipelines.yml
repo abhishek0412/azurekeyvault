@@ -228,8 +228,8 @@ stages:
       displayName: 'Step 11'
       name: step11
   
-  - job: YourNEWDummyJobs
-    displayName: 'Your NEW Dummy Job'
+  - job: YourLatestDummyJobs
+    displayName: 'Your Latest Dummy Job'
     steps:
     - script: echo This script runs before the template's steps
     - template: ado/Stepsdummy.yml
