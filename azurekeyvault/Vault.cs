@@ -4,11 +4,11 @@ using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 
 namespace azurekeyvault;
-public class Vault
+public class VaultSecret
 {
     string keyVaultUrl = "https://akv-terraform0412.vault.azure.net/";
 
-    public Vault()
+    public VaultSecret()
     {
 
     }
