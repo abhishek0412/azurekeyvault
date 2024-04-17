@@ -2,13 +2,13 @@
 namespace azurekeyvaultTest;
 
 [TestClass]
-public class TestVault
+public class TestVaultSecrets
 
 {
     [TestMethod]
     public void TestSecretsCreation()
     {
-        Vault myVault = new Vault();
+        VaultSecret myVault = new VaultSecret();
         //Assert.AreEqual(myVault.CreateSecret("Abhishek", "Choudhary"), "Abhishek");
         Console.WriteLine(myVault.CreateSecret("Supriya", "Choudhary"));
     }
@@ -16,7 +16,7 @@ public class TestVault
     [TestMethod]
     public void TestSecretsRetrival()
     {
-        Vault myVault = new Vault();
+        VaultSecret myVault = new VaultSecret();
         //Assert.AreEqual(myVault.GetSecret("Abhishek"), "Abhishek");
         Console.WriteLine(myVault.GetSecret("secret-sauce"));
     }
@@ -24,7 +24,7 @@ public class TestVault
     [TestMethod]
     public void TestSecretsDeletion()
     {
-        Vault myVault = new Vault();
+        VaultSecret myVault = new VaultSecret();
         //Assert.AreEqual(myVault.DeletedSecret("Abhishek"), "Abhishek");
         Console.WriteLine(myVault.DeletedSecret("Supriya"));
 
@@ -34,7 +34,7 @@ public class TestVault
     [TestMethod]
     public void TestSecretsListAll()
     {
-        Vault myVault = new Vault();
+        VaultSecret myVault = new VaultSecret();
         Assert.AreEqual(myVault.ListSecrets,null);
        
     }
