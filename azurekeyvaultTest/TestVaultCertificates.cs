@@ -2,11 +2,10 @@
 namespace azurekeyvaultTest;
 
 [TestClass]
-public class TestVaultKeys
+public class TestVaultCertificates
 
 {
     
-
     [TestMethod,Priority(0)]
     public void TestCertificateDownload()
     {
