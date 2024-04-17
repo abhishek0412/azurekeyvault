@@ -35,7 +35,14 @@ public class TestVaultSecrets
     public void TestSecretsListAll()
     {
         VaultSecret myVault = new VaultSecret();
-        Console.WriteLine(myVault.ListSecrets());
+
+        Dictionary<string, string> myDic = myVault.ListSecrets();
+
+        foreach(var list in myDic)
+        {
+            Console.WriteLine(list.Key + "---" + list.Value);
+        }
+        
        
     }
 }
