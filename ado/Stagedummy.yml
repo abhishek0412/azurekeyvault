@@ -1,0 +1,7 @@
+
+stages:
+- stage: DummyAngular
+  jobs:
+  - job: DummyAngularinstall
+    steps:
+    - script: echo "Hello Template Stage"
