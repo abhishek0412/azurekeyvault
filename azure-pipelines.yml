@@ -15,7 +15,7 @@ variables:
   buildConfiguration: 'Release'
 
 jobs:
-  - job:
+  - job: PrepareBuild
     displayName: 'Buid and Test the product'
     steps:
     - task: NuGetToolInstaller@1
@@ -31,6 +31,7 @@ jobs:
         configuration: '$(buildConfiguration)'
 
     - task: VSTest@2
+      
       inputs:
         testSelector: 'testAssemblies'
         testAssemblyVer2: |
@@ -47,6 +48,7 @@ jobs:
 
   - job:
     displayName: 'Run the DevSecOps'
+    dependsOn: PrepareBuild
     steps:
     - task: MicrosoftSecurityDevOps@1
       inputs:
