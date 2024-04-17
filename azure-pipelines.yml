@@ -13,46 +13,92 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+stages:
+- stage: BuildTestStage
+  displayName: 'Build and Test Stage'
+  jobs:
 
-jobs:
-  - job: PrepareBuild
-    displayName: 'Buid and Test the product'
+    - job: PrepareBuild
+      displayName: 'Buid and Test the product'
+      steps:
+      - task: NuGetToolInstaller@1
+
+      - task: NuGetCommand@2
+        inputs:
+          restoreSolution: '$(solution)'
+
+      - task: VSBuild@1
+        inputs:
+          solution: '$(solution)'
+          platform: '$(buildPlatform)'
+          configuration: '$(buildConfiguration)'
+
+
+      - task: VSTest@2
+        
+        inputs:
+          testSelector: 'testAssemblies'
+          testAssemblyVer2: |
+            **\bin\**\*test.dll
+            **\bin\**\*tests.dll
+          searchFolder: '$(System.DefaultWorkingDirectory)'
+          codeCoverageEnabled: true
+          platform: '$(buildPlatform)'
+          configuration: '$(buildConfiguration)'
+        env:
+          AZURE_CLIENT_ID: $(AZURE_CLIENT_ID)
+          AZURE_CLIENT_SECRET: $(AZURE_CLIENT_SECRET)
+          AZURE_TENANT_ID:  $(AZURE_TENANT_ID)
+
+    - job:
+      displayName: 'Run the DevSecOps'
+      dependsOn: PrepareBuild
+      steps:
+      - task: MicrosoftSecurityDevOps@1
+        inputs:
+          command: 'run'
+          break: true
+        condition: always()
+- stage:
+  displayName: DummyStage
+  jobs:
+  - job: 
+    displayName: 'Dummy Job'
     steps:
-    - task: NuGetToolInstaller@1
+      - task: CopyFiles@2
+        displayName: 'Dummy Copy Task'
+        name: dummyCopy
+        inputs:
+          SourceFolder: '$(agent.builddirectory)'
+          Contents: '**'
+          TargetFolder: '$(agent.builddirectory)/temp'
+          CleanTargetFolder: true
+          OverWrite: true
+        condition: always()
 
-    - task: NuGetCommand@2
-      inputs:
-        restoreSolution: '$(solution)'
+      - script: echo "Step 1"
+        displayName: 'Step 1'
+        name: step1
 
-    - task: VSBuild@1
-      inputs:
-        solution: '$(solution)'
-        platform: '$(buildPlatform)'
-        configuration: '$(buildConfiguration)'
+      - script: echo "Step 2"
+        displayName: 'Step 2'
+        name: step2
 
-    - task: VSTest@2
-      
-      inputs:
-        testSelector: 'testAssemblies'
-        testAssemblyVer2: |
-          **\bin\**\*test.dll
-          **\bin\**\*tests.dll
-        searchFolder: '$(System.DefaultWorkingDirectory)'
-        codeCoverageEnabled: true
-        platform: '$(buildPlatform)'
-        configuration: '$(buildConfiguration)'
-      env:
-        AZURE_CLIENT_ID: $(AZURE_CLIENT_ID)
-        AZURE_CLIENT_SECRET: $(AZURE_CLIENT_SECRET)
-        AZURE_TENANT_ID:  $(AZURE_TENANT_ID)
-
-  - job:
-    displayName: 'Run the DevSecOps'
-    dependsOn: PrepareBuild
+      - script: echo "Step 3"
+        displayName: 'Step 3'
+        name: step3
+  - job: 
+    displayName: 'Another Dummy Job '
     steps:
-    - task: MicrosoftSecurityDevOps@1
-      inputs:
-        command: 'run'
-        break: true
-      condition: always()
+      - script: echo "Step 1"
+        displayName: 'Step 1'
+        name: step1
+
+      - script: echo "Step 2"
+        displayName: 'Step 2'
+        name: step2
+
+      - script: echo "Step 3"
+        displayName: 'Step 3'
+        name: step3
 
