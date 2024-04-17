@@ -1,0 +1,9 @@
+
+jobs:
+- job: Ubuntu
+  steps:
+  - bash: echo "Hello Ubuntu"
+
+- job: Windows
+  steps:
+  - bash: echo "Hello Windows"
