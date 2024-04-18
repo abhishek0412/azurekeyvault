@@ -13,6 +13,14 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: abhishek0412/AzurePipelineTemplates
+      endpoint: abhishek0412
+
 stages:
 - stage: BuildTestStage
   displayName: 'Build and Test Stage'
@@ -217,6 +225,7 @@ stages:
       - script: echo "Step 33"
         displayName: 'Step 33'
         name: step33
+- template: ado/common/Stage-Dragon.yml@templates
 - stage: FinalStage
   displayName: FinalStage
   dependsOn: YourDummyStage
@@ -234,7 +243,9 @@ stages:
     - script: echo This script runs before the template's steps
     - template: ado/Stepsdummy.yml
     - script: echo This script runs before the template's steps
+    - template: ado/common/Stepsdummy.yml@templates
 
   - template: ado/Jobsdummy.yml
+  - template: ado/common/Jobs-Dragon.yml@templates
 
 - template: ado/Stagedummy.yml 
